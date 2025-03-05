@@ -1,0 +1,32 @@
+{
+  "personal_information": {
+    "pre": "Please provide your personal details to help us identify you.",
+    "success": "Your personal information has been recorded.",
+    "failure": "Failed to save personal details. Please try again."
+  },
+  "contact_information": {
+    "pre": "Enter your contact details to help us reach you or your emergency contact.",
+    "success": "Your contact information has been saved.",
+    "failure": "Failed to save contact details. Please check and retry."
+  },
+  "household_information": {
+    "pre": "Tell us about your household to help us provide better assistance.",
+    "success": "Your household information has been saved.",
+    "failure": "Failed to save household details. Please try again."
+  },
+  "utility_information": {
+    "pre": "Provide details about your utility services for necessary assistance.",
+    "success": "Your utility information has been recorded.",
+    "failure": "Failed to save utility details. Please check your input."
+  },
+  "disaster_information": {
+    "pre": "Describe the disaster situation to help us assess the emergency.",
+    "success": "Your disaster information has been recorded.",
+    "failure": "Failed to save disaster details. Please try again."
+  },
+  "assistance_information": {
+    "pre": "Do you need any assistance? Let us know so we can help.",
+    "success": "Your assistance request has been recorded.",
+    "failure": "Failed to save assistance request. Please retry."
+  }
+}

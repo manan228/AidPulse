@@ -1,0 +1,41 @@
+{
+  "personal_information": {
+    "name": "",
+    "date_of_birth": "",
+    "gender": "",
+    "unique_id": ""
+  },
+  "contact_information": {
+    "phone_number": "",
+    "email": "",
+    "emergency_contact_name": "",
+    "emergency_contact_phone": ""
+  },
+  "location_information": {
+    "address": "",
+    "coordinates": {
+      "latitude": "",
+      "longitude": ""
+    },
+    "temporary_shelter": ""
+  },
+  "household_information": {
+    "adults": "",
+    "children": "",
+    "elderly": "",
+    "pets": ""
+  },
+  "utility_information": {
+    "utility_type": ""
+  },
+  "disaster_information": {
+    "disaster_type": "",
+    "fire_active": ""
+  },
+  "assistance_information": {
+    "medical_assistance": ""
+  },
+  "timestamp": {
+    "report_time": ""
+  }
+}
