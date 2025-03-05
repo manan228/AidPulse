@@ -10,8 +10,8 @@
       "rationale": "To identify the victim",
       "value": "",
       "optional": false,
-      "pre": "abc",
-      "post": "cde"
+      "pre": "",
+      "post": ""
     },
     {
       "priority": 2,
@@ -24,7 +24,7 @@
       "value": "",
       "optional": false,
       "pre": "",
-      "post": "fgh"
+      "post": ""
     },
     {
       "priority": 3,
