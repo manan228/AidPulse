@@ -53,22 +53,6 @@
       "post": ""
     },
     {
-      "priority": 5,
-      "id": 11,
-      "name": "coordinates",
-      "display_name": "Geolocation (Latitude, Longitude)",
-      "format": "object",
-      "data_type": "geo",
-      "rationale": "To locate you precisely if you're in a hard-to-describe location",
-      "value": {
-        "latitude": "",
-        "longitude": ""
-      },
-      "optional": true,
-      "pre": "",
-      "post": ""
-    },
-    {
       "priority": 6,
       "id": 1,
       "name": "name",
@@ -199,19 +183,6 @@
       "post": ""
     },
     {
-      "priority": 16,
-      "id": 3,
-      "name": "date_of_birth",
-      "display_name": "Date of Birth",
-      "format": "YYYY-MM-DD",
-      "data_type": "date",
-      "rationale": "To ensure age-appropriate services and medical assistance",
-      "value": "",
-      "optional": false,
-      "pre": "",
-      "post": "fgh"
-    },
-    {
       "priority": 17,
       "id": 4,
       "name": "gender",
@@ -232,19 +203,6 @@
       "format": "string",
       "data_type": "text",
       "rationale": "To send you important recovery resources and updates",
-      "value": "",
-      "optional": true,
-      "pre": "",
-      "post": ""
-    },
-    {
-      "priority": 19,
-      "id": 5,
-      "name": "unique_id",
-      "display_name": "National ID / SSN",
-      "format": "string",
-      "data_type": "text",
-      "rationale": "To help connect you with existing records and available benefits",
       "value": "",
       "optional": true,
       "pre": "",
