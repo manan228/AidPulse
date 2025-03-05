@@ -12,9 +12,10 @@ import {
   Legend,
   Filler,
 } from "chart.js";
-import { Bar, Pie, Doughnut, PolarArea } from "react-chartjs-2";
+
+import { Bar, Pie, Line, Doughnut, PolarArea, Radar } from "react-chartjs-2";
 import { resourceRequestLabel } from "../../../chartjs/chartData/resourseRequest";
-import { 
+import {
   getDisasterTypeDistribution,
   getHouseholdComposition,
   getUtilityOutages,
@@ -122,7 +123,7 @@ const getDisasterTypeData = () => {
 // Household Composition Chart
 const getHouseholdCompositionData = () => {
   const householdData = getHouseholdComposition();
-  
+
   return {
     labels: Object.keys(householdData),
     datasets: [
@@ -139,7 +140,7 @@ const getHouseholdCompositionData = () => {
 // Utility Outages Chart
 const getUtilityOutagesData = () => {
   const utilityCounts = getUtilityOutages();
-  
+
   return {
     labels: Object.keys(utilityCounts),
     datasets: [
@@ -156,7 +157,7 @@ const getUtilityOutagesData = () => {
 // Medical Assistance Chart
 const getMedicalAssistanceData = () => {
   const medicalData = getMedicalAssistanceNeeds();
-  
+
   return {
     labels: Object.keys(medicalData),
     datasets: [
@@ -173,7 +174,7 @@ const getMedicalAssistanceData = () => {
 // Shelter Status Chart
 const getShelterStatusData = () => {
   const shelterData = getTemporaryShelterStatus();
-  
+
   return {
     labels: Object.keys(shelterData),
     datasets: [
@@ -190,7 +191,7 @@ const getShelterStatusData = () => {
 // Gender Distribution Chart
 const getGenderData = () => {
   const genderData = getGenderDistribution();
-  
+
   return {
     labels: Object.keys(genderData),
     datasets: [
@@ -205,10 +206,10 @@ const getGenderData = () => {
 };
 
 // Chart component that accepts chart type as prop
-const ChartJS = ({ 
-  chartType = "resource", 
+const ChartJS = ({
+  chartType = "resource",
   height = "300px",
-  options = {} 
+  options = {}
 }) => {
   // Combine default options with custom options
   const chartOptions = {
@@ -235,6 +236,37 @@ const ChartJS = ({
       chartData = getHouseholdCompositionData();
       ChartComponent = Bar;
       chartOptions.plugins.title.text = "Average Household Composition";
+      // Set specific options for the bar chart
+
+      chartOptions.scales = {
+
+        y: {
+
+          beginAtZero: true,
+
+          title: {
+
+            display: true,
+
+            text: 'Average Number per Household'
+
+          }
+
+        },
+
+        x: {
+
+          title: {
+
+            display: true,
+
+            text: 'Household Member Type'
+
+          }
+
+        }
+
+      };
       break;
     case "utility":
       chartData = getUtilityOutagesData();
