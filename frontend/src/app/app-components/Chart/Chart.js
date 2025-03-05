@@ -12,7 +12,7 @@ import {
   Legend,
   Filler,
 } from "chart.js";
-import { Bar, Pie, Line, Doughnut, PolarArea, Radar } from "react-chartjs-2";
+import { Bar, Pie, Doughnut, PolarArea } from "react-chartjs-2";
 import { resourceRequestLabel } from "../../../chartjs/chartData/resourseRequest";
 import { 
   getDisasterTypeDistribution,

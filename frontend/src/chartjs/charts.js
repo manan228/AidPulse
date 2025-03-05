@@ -7,7 +7,7 @@ const ctx5 = document.getElementById('resourceCategoryChart').getContext('2d');
 fetch('synthetic_fire_resource_data.json')
   .then(response => response.json())
   .then(data => {
-    const resourceRequests = {};
+    // const resourceRequests = {};
     const countyRequests = {};
     const responseTimes = [];
     const geoData = [];

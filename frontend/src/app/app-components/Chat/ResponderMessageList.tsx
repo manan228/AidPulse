@@ -1,72 +1,69 @@
 "use client";
 
-import { Avatar, useTheme, Button, Typography, Paper, Grid, Box, IconButton } from "@mui/material";
-import {
-  VirtuosoMessageList,
-  VirtuosoMessageListLicense,
-  VirtuosoMessageListMethods,
-  VirtuosoMessageListProps,
-} from "@virtuoso.dev/message-list";
-import { useRef, useState, useContext } from "react";
-// import ChatInput from "./ChatInput";
-import Image from "next/image";
-import { Message } from "@/app/types/types";
+import { useTheme, Button, Typography, Paper, Grid, Box, IconButton } from "@mui/material";
+// import {
+//   // VirtuosoMessageListMethods,
+//   VirtuosoMessageListProps,
+// } from "@virtuoso.dev/message-list";
+import { useState, useContext } from "react";
+// import Image from "next/image";
+// import { Message } from "@/app/types/types";
 import InteractiveGraphic from "../InteractiveGraphic/InteractiveGraphic";
 import ChartJS from "../Chart/Chart";
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { AppContext } from "@/app/AppContext";
 
-const key = process.env.NEXT_PUBLIC_VIRTUOSO_KEY || "";
+// const key = process.env.NEXT_PUBLIC_VIRTUOSO_KEY || "";
 
-const ItemContent: VirtuosoMessageListProps<Message, null>["ItemContent"] = ({
-  data,
-}: {
-  data: Message;
-}) => {
-  const ownMessage = data.user === "me";
-  const theme = useTheme();
+// const ItemContent: VirtuosoMessageListProps<Message, null>["ItemContent"] = ({
+//   data,
+// }: {
+//   data: Message;
+// }) => {
+//   const ownMessage = data.user === "me";
+//   const theme = useTheme();
 
-  return (
-    <div
-      style={{
-        paddingBottom: "2rem",
-        display: "flex",
-        alignItems: "flex-end",
-        flexDirection: data.user === "me" ? "row-reverse" : "row",
-      }}
-    >
-      {data.user !== "me" && (
-        <Avatar style={{ backgroundColor: "#1E1E1E" }}>
-          {" "}
-          <Image
-            alt="AidPulseLogo"
-            src="/assets/logo.webp"
-            height={24}
-            width={24}
-          ></Image>
-        </Avatar>
-      )}
+//   return (
+//     <div
+//       style={{
+//         paddingBottom: "2rem",
+//         display: "flex",
+//         alignItems: "flex-end",
+//         flexDirection: data.user === "me" ? "row-reverse" : "row",
+//       }}
+//     >
+//       {data.user !== "me" && (
+//         <Avatar style={{ backgroundColor: "#1E1E1E" }}>
+//           {" "}
+//           <Image
+//             alt="AidPulseLogo"
+//             src="/assets/logo.webp"
+//             height={24}
+//             width={24}
+//           ></Image>
+//         </Avatar>
+//       )}
 
-      <div
-        style={{
-          maxWidth: "65%",
-          marginLeft: data.user === "me" ? undefined : 8, // Space between avatar and message
-          marginRight: data.user === "me" ? 8 : undefined, // Space for "me" messages
-          background: ownMessage
-            ? theme.palette.primary.main
-            : theme.palette.background.paper,
-          color: theme.palette.text.primary,
-          borderRadius: "1rem",
-          padding: "1rem",
-          display: "flex",
-          flexDirection: "column",
-        }}
-      >
-        {data.text}
-      </div>
-    </div>
-  );
-};
+//       <div
+//         style={{
+//           maxWidth: "65%",
+//           marginLeft: data.user === "me" ? undefined : 8, // Space between avatar and message
+//           marginRight: data.user === "me" ? 8 : undefined, // Space for "me" messages
+//           background: ownMessage
+//             ? theme.palette.primary.main
+//             : theme.palette.background.paper,
+//           color: theme.palette.text.primary,
+//           borderRadius: "1rem",
+//           padding: "1rem",
+//           display: "flex",
+//           flexDirection: "column",
+//         }}
+//       >
+//         {data.text}
+//       </div>
+//     </div>
+//   );
+// };
 
 // Chart types and their labels
 const chartTypes = [
@@ -80,7 +77,7 @@ const chartTypes = [
 ];
 
 export default function ResponderMessageList() {
-  const virtuoso = useRef<VirtuosoMessageListMethods<Message, null>>(null);
+  // const virtuoso = useRef<VirtuosoMessageListMethods<Message, null>>(null);
   const theme = useTheme();
   const [activeChart, setActiveChart] = useState("disaster");
   const [showCharts, setShowCharts] = useState(true);
