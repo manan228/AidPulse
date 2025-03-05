@@ -2,23 +2,22 @@
 
 ## Project Overview
 
-AidPulse is a personal AI drive chat application designed to assist in wildfire emergency situations by providing an AI-powered chat interface for different user roles. The system serves as a communication platform during wildfire emergencies, offering tailored assistance based on user needs.
+AidPulse is a personal AI driven chat application designed to assist in post emergency situations by providing an AI-powered chat interface for different user roles. The system is an anlytics engine that aids responders and volunteers with actionable insigts for speedy service and improved efficiency.
 
 ### Key Features and Capabilities
 
 - **Role-Based Interfaces**:
-  - **Victims**: Direct communication and assistance for those in immediate danger
-  - **Citizens**: General information and safety guidance
-  - **Responders**: Enhanced interface with interactive graphics for emergency responders
-  - **Helpers**: Resources and guidance for those providing assistance
+  - **Victims**:    Context aware chat to communicate their needs and problems to repoders and volunteers.
+  - **Responders**: Advanced Analytics to quickly understand the problems in realtime.
+  - **Volunteers**: Actionable insights to guide their assistance where it's needed most.
 
 - **AI-Powered Response System**
-  - Intelligent chat interface using local LLM models
-  - Contextual response generation based on emergency type
-  - Personalized assistance based on user's need and the resource availibility
+  - The chat is aware of user, situation and analytic conectext when gathering information form vicitms. 
+  - Analytic engine is aware of the analytic context of the responder or volunteers
+  - LLMs trained to provide assistance tailored to user's needs
 
-- **Emergency Data Collection**
-  - Structured data collection for personal information
+- **Data Collection in realtime**
+  - Structured data collection for personal informatio
   - Location and disaster information gathering in the real-time
   - Household and utility assistance tracking
 
@@ -27,14 +26,13 @@ AidPulse is a personal AI drive chat application designed to assist in wildfire 
 - **Emergency Response Centers**: Deployment in official emergency response facilities
 - **Mobile Emergency Units**: Portable deployment for field operations
 - **Public Access Points**: Community centers during evacuation scenarios
-- **Integration with Existing Emergency Systems**: API-based connection to central emergency management systems
 
 ### Scalability and Maintenance Considerations
 
 - **Horizontal Scaling**: MongoDB database designed for horizontal scaling to handle increased load during emergencies
 - **Offline Capability**: Local AI models through Ollama or WebLLM integration to operate in limited connectivity environments
 - **Maintenance Schedule**: Regular updates for AI models and response templates
-- **Data Retention Policy**: Automated data management for emergency information with appropriate retention periods
+- **Data Retention Policy**: Automated data management for appropriate retention periods s per client req
 
 docs/
 ├── project-overview.md
