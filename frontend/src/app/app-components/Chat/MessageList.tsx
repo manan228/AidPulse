@@ -7,7 +7,7 @@ import {
   VirtuosoMessageListMethods,
   VirtuosoMessageListProps,
 } from "@virtuoso.dev/message-list";
-import { useContext, useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef } from "react";
 import ChatInput from "./ChatInput";
 import { Message } from "@/app/types/types";
 import { AppContext } from "@/app/AppContext";
@@ -78,7 +78,7 @@ export default function MessageList() {
   const virtuoso = useRef<VirtuosoMessageListMethods<Message, null>>(null);
   const context = useContext(AppContext);
   if (!context) throw new Error("App must be used within an AppProvider");
-  const [postQuestion, setPostQuestion] = useState(false);
+  // const [postQuestion, setPostQuestion] = useState(false);
   const { setUserType } = context;
   const theme = useTheme();
   
@@ -104,9 +104,9 @@ export default function MessageList() {
         JSON.parse(localStorage.getItem("questionData") ?? "")
       );
 
-      if(firstQuestionObject.post !== "") {
-        setPostQuestion(true);
-      }
+      // if(firstQuestionObject.post !== "") {
+      //   setPostQuestion(true);
+      // }
 
       if(firstQuestionObject.pre !== "") {
         generateVirtuosoMessage(
@@ -188,7 +188,7 @@ export default function MessageList() {
           paddingTop: 16,
         }}
       >
-        <ChatInput virtuoso={virtuoso} idCounter={idCounter} postQuestion={postQuestion}/>
+        <ChatInput virtuoso={virtuoso} idCounter={idCounter} />
       </div>
     </div>
     </>
