@@ -11,7 +11,7 @@ interface InteractiveGraphicProps {
   buttonUrl: string
 }
 
-const InteractiveGraphic = ({ buttonUrl, title }: InteractiveGraphicProps) => {
+const InteractiveGraphic = ({ buttonUrl }: InteractiveGraphicProps) => {
   const [showImage, ] = useState(false)
   const context = useContext(AppContext)
 
